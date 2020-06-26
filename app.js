@@ -8,7 +8,7 @@ app.get('/search', function (req, res) {
     // Simulating async operation
 
     console.log('dd : ', req);
-
+    console.log('res : ', res);
     setImmediate(function () {
         var jsonStr = req.query.params
         try {
