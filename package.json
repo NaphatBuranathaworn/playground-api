@@ -1,12 +1,15 @@
 {
   "name": "common-api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "for playground",
   "main": "app.js",
   "scripts": {
-    "run": "nodemon app.js",
+    "start-dev": "nodemon --exec babel-node app.js",
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-dev": "jest"
+  },
+  "jest": {
+    "verbose": true
   },
   "author": "",
   "license": "ISC",
@@ -24,5 +27,11 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "jest": "^26.1.0"
   }
 }
