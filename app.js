@@ -1,6 +1,7 @@
 var compression = require('compression')
 var express = require('express')
-const port = 3000
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 var app = express()
 app.use(compression())
 
@@ -22,5 +23,3 @@ app.get('/search', function (req, res) {
         }
     })
 })
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
