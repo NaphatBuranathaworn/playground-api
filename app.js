@@ -4,6 +4,10 @@ const port = 3000
 var app = express()
 app.use(compression())
 
+app.get('/', function (req, res) {
+    res.send(JSON.stringify({ Hello: 'world' }));
+});
+
 app.get('/search', function (req, res) {
     // Simulating async operation
 
