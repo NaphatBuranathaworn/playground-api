@@ -1,10 +1,9 @@
 const compression = require('compression')
 const express = require('express')
 const app = express()
-const port = process.env.PORT
-console.log('START port : ', port)
+const port = process.env.PORT || 3000
 app.use(compression())
-app.listen(port)
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 require('dotenv/config')
 
 const swaggerUi = require('swagger-ui-express')
