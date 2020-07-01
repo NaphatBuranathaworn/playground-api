@@ -32,6 +32,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ServerInfo"
+  /catalog:
+    get:
+      tags:
+        - root
+      summary: Get Server Information
+      description: Returns information about the server
+      operationId: catalog
+      responses:
+        "200":
+        description: success
+        content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServerInfo"
 servers:
   - url: /api/v1
 components:
