@@ -6,13 +6,12 @@ module.exports = {
     autorestart: true,
     instances: 1,
     args: 'one two',
-    max_memory_restart: '16',
     env: {
       PORT: 3000,
       NODE_ENV: 'development'
     },
     production: {
-      PORT: 8080,
+      PORT: 80,
       NODE_ENV: 'production'
     }
   }],
